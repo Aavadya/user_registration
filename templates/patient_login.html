@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Login</title>
+    <style>
+        body {
+            background-color: #66ccff; 
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            color: #003366; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Patient Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="{% url 'patient_login' %}">Sign Up as Patient</a></p>
+</body>
+</html>
+
+

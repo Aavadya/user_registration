@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Login</title>
+    <style>
+        body {
+            background-color: #99ff99; 
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            color: #336600; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Doctor Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="{% url 'doctor_login' %}">Sign Up as Doctor</a></p>
+</body>
+</html>
